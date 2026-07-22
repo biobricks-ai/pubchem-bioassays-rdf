@@ -1,0 +1,40 @@
+{
+  "assays_in_artifact": 6,
+  "converted_rows": 10005,
+  "evidence_boundary": "deposited PubChem assay outcome and normalized activity score; not a toxicology, hazard, efficacy, or target assertion",
+  "excluded_nonempty_cells": 551229224,
+  "explicit_exclusions": {
+    "bounded-validation-build": 551229224
+  },
+  "field_disposition_coverage": 1.0,
+  "full_build_expectation": {
+    "estimated_triples": "greater than 800 million",
+    "field_disposition_coverage": 1.0,
+    "result_rows": 92224748,
+    "streaming_required": true
+  },
+  "mapped_cell_coverage": 0.00010791804377175736,
+  "mapped_nonempty_cells": 59494,
+  "n_hexane_rows": 5,
+  "outcomes_in_artifact": [
+    "Active",
+    "Inactive"
+  ],
+  "result_row_coverage": 0.00010848498062580773,
+  "source_limitations": [
+    "Source brick omits assay titles, targets, Gene/UniProt identifiers, units and assay-specific measurements.",
+    "No target or quantitative activity claim can be reconstructed from the retained core fields."
+  ],
+  "source_nonempty_by_field": {
+    "activity_outcome": 92214030,
+    "activity_score": 90651164,
+    "aid": 92224748,
+    "cid": 91987014,
+    "sid": 92224748,
+    "smiles": 91987014
+  },
+  "source_nonempty_cells": 551288718,
+  "source_rows": 92224748,
+  "source_tables": 1,
+  "triples": 99532
+}

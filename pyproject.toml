@@ -1,0 +1,7 @@
+[project]
+name="pubchem-bioassays-rdf"
+version="0.1.0"
+requires-python=">=3.11"
+dependencies=["pyarrow>=15","rdflib>=7"]
+[tool.pytest.ini_options]
+testpaths=["tests"]

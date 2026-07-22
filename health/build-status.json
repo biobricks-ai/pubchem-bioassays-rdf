@@ -1,0 +1,1 @@
+{"status":"validated-bounded-build","full_source_rows":92224748,"artifact_result_limit":10000,"full_build_supported":true,"scale_blocker":"A full graph is expected to exceed 800 million triples and many tens of gigabytes uncompressed."}

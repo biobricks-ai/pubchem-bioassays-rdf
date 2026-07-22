@@ -1,0 +1,8 @@
+stages:
+  convert:
+    cmd: python stages/convert.py --max-results 10000
+    deps: [.bb/dependencies.txt, stages/convert.py]
+    outs: [brick/pubchem-bioassays-rdf.nt.gz]
+    metrics:
+      - reports/source-coverage.json:
+          cache: false

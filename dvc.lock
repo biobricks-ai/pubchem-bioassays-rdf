@@ -1,0 +1,22 @@
+schema: '2.0'
+stages:
+  convert:
+    cmd: python stages/convert.py --max-results 10000
+    deps:
+    - path: .bb/dependencies.txt
+      hash: md5
+      md5: e5f0322db354b2a10b040c8792de54bd
+      size: 22
+    - path: stages/convert.py
+      hash: md5
+      md5: 87a16d1bc744507b859477c29a013bfa
+      size: 5327
+    outs:
+    - path: brick/pubchem-bioassays-rdf.nt.gz
+      hash: md5
+      md5: d122472f3702443f1f601096292abf0e
+      size: 585020
+    - path: reports/source-coverage.json
+      hash: md5
+      md5: de67a9bed0e4e173443bc97e53f4a161
+      size: 1297

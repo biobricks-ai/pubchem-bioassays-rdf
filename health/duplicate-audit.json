@@ -1,0 +1,1 @@
+{"overlap":["PubChemRDF","PubChem BioAssay API and downloads","ChEMBL for some deposited assays","Tox21/ToxCast PubChem depositions"],"keys":["PubChem AID","SID","CID","source row occurrence"],"policy":"Preserve each deposited row occurrence; do not merge by AID/CID because the upstream core table can contain multiple result rows and has discarded result tags."}
