@@ -1,0 +1,64 @@
+{
+  "@context": "../../context/source.context.jsonld",
+  "@type": "dcat:Dataset",
+  "@id": "https://biobricks.ai/bricks/pubchem-bioassays-rdf",
+  "dcterms:title": "PubChem BioAssay core results as RDF",
+  "dcterms:description": "A streaming RDF (n-triples) transformation of PubChem BioAssay core result rows, preserving canonical PubChem AID, SID and CID links, deposited activity outcome, PubChem normalized activity score and reported SMILES. It is built from the intermediate BioBricks brick 'nih-pubchem-bioassays' (see .bb/dependencies.txt), which itself is sourced from the NCBI PubChem BioAssay archive. PubChem is a US National Library of Medicine / NCBI resource; government-created content is public domain, though depositor content may retain rights.",
+  "dcterms:license": "https://www.usa.gov/government-works",
+  "dcterms:creator": "US National Center for Biotechnology Information (NCBI)",
+  "dcterms:publisher": "National Library of Medicine (NLM) / NCBI, US National Institutes of Health",
+  "dcterms:identifier": "https://pubchem.ncbi.nlm.nih.gov/docs/bioassays",
+  "biobricks:licenseName": "US Government Work / public domain (NCBI PubChem)",
+  "biobricks:licenseClass": "open",
+  "biobricks:merckCommercialUse": "permitted",
+  "biobricks:licenseEvidence": [
+    {
+      "source": ".bb/dependencies.txt",
+      "quote": "nih-pubchem-bioassays",
+      "confidence": "high"
+    },
+    {
+      "source": "stages/convert.py",
+      "quote": "(DATASET,DCTERMS.source,URIRef(\"https://pubchem.ncbi.nlm.nih.gov/docs/bioassays\")),(DATASET,DCTERMS.license,URIRef(\"https://www.nlm.nih.gov/databases/download/terms_and_conditions.html\"))",
+      "confidence": "high"
+    },
+    {
+      "source": "README.md",
+      "quote": "NCBI database content produced by the US Government is generally public domain in the United States, but PubChem includes depositor content that can retain third-party rights. The graph points to the NLM download terms and retains source provenance rather than claiming a Creative Commons license.",
+      "confidence": "high"
+    },
+    {
+      "source": "https://www.ncbi.nlm.nih.gov/home/about/policies/",
+      "quote": "Information that is created by or for the US government on this site is within the public domain. Public domain information on the National Library of Medicine (NLM) Web pages may be freely distributed and copied.",
+      "confidence": "high"
+    }
+  ],
+  "biobricks:reviewed": false,
+  "biobricks:reviewNotes": "Determined by the BioBricks licensing-provenance annotation agent (Claude, slice items[1338:1344]). This brick is a derived RDF transformation of the intermediate brick 'nih-pubchem-bioassays', which is the NCBI PubChem BioAssay archive. The convert.py stamps the output with the NLM download terms IRI; PubChem/NCBI government-created content is public domain and freely redistributable, including commercially, so classed open / commercial permitted (matching the repo precedent for other PubChem BioAssay bricks). The repo had no .bb/source.jsonld. HUMAN REVIEW: PubChem BioAssay aggregates depositor-submitted assays that may retain third-party rights (the README flags this explicitly); confirm before any authoritative commercial-use assertion.",
+  "prov:wasDerivedFrom": [
+    {
+      "@type": "dcat:Dataset",
+      "@id": "https://biobricks.ai/bricks/nih-pubchem-bioassays",
+      "dcterms:title": "nih-pubchem-bioassays (intermediate BioBricks brick of PubChem BioAssay core results)",
+      "dcterms:license": "https://www.usa.gov/government-works",
+      "dcterms:publisher": "NCBI / US National Library of Medicine",
+      "dcat:landingPage": "https://pubchem.ncbi.nlm.nih.gov/docs/bioassays"
+    },
+    {
+      "@type": "dcat:Dataset",
+      "@id": "https://pubchem.ncbi.nlm.nih.gov/docs/bioassays",
+      "dcterms:title": "PubChem BioAssay",
+      "dcterms:license": "https://www.usa.gov/government-works",
+      "dcterms:publisher": "NCBI / US National Library of Medicine",
+      "dcat:landingPage": "https://pubchem.ncbi.nlm.nih.gov/docs/bioassays"
+    }
+  ],
+  "prov:wasGeneratedBy": {
+    "@type": "prov:Activity",
+    "prov:wasAssociatedWith": "BioBricks licensing-provenance annotation agent (Claude, slice items[1338:1344])",
+    "prov:endedAtTime": {
+      "@type": "xsd:dateTime",
+      "@value": "2026-08-05T00:00:00Z"
+    }
+  }
+}
